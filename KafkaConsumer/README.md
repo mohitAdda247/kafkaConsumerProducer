@@ -8,7 +8,7 @@ Go to your Apache Kafka bin files based on your OS platform. <br/>
 Open terminal/command-prompt there.
 
 ```bash
-kafka-console-producer.bat --broker-list localhost:9092 --topic user --from-beginning
+kafka-console-producer.bat --broker-list localhost:9092 --topic user
 ```
 Hit enter already? (Great...)
 
