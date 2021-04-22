@@ -18,7 +18,7 @@ public class UserService {
 	
 	User newUser = new User();
 	
-	@KafkaListener(topics="user")
+	@KafkaListener(topics="user", groupId="mohit")
 	public void getUser(String  user) {
 		System.out.println("Kafka consumed:"  + user);
 		newUser = gson.fromJson(user, User.class);
