@@ -20,9 +20,9 @@ public class UserService {
 	
 	@KafkaListener(topics="user")
 	public void getUser(String  user) {
-		System.out.println("Kafka even consumed:"  + user);
+		System.out.println("Kafka consumed:"  + user);
 		newUser = gson.fromJson(user, User.class);
-		System.out.println("Model converted value:" + user.toString());
+		System.out.println("Model converted value:" + newUser);
 		userRepository.save(newUser);
 	}
 }
